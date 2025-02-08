@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cleark Authentication
 
-## Getting Started
+A Next.js 13+ authentication project with Tailwind CSS and theme support. This project provides a modern, secure authentication system using Clerk Authentication with a beautiful UI powered by Tailwind CSS.
 
-First, run the development server:
+## Features
 
+- 🔐 Secure authentication with Clerk
+- 🎨 Modern UI with Tailwind CSS
+- 🌙 Theme support
+- ⚡ Built with Next.js 13+
+- 📱 Responsive design
+- 🔄 Real-time session management
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+- Node.js (v16.8 or higher)
+- npm or yarn
+- Git
+- A Clerk account (sign up at https://clerk.dev)
+
+## Step-by-Step Setup Guide
+
+### 1. Initial Setup
+
+1. Clone the repository:
+```bash
+git clone https://github.com/YOUR-USERNAME/cleark-authentication.git
+```
+
+2. Navigate to the project directory:
+```bash
+cd cleark-authentication
+```
+
+3. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+### 2. Environment Configuration
+
+1. Create a `.env.local` file in the root directory
+2. Add your Clerk environment variables:
+```env
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_publishable_key
+CLERK_SECRET_KEY=your_secret_key
+```
+
+### 3. Development
+
+Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+├── src/
+│   ├── app/          # Next.js 13+ app directory
+│   ├── components/   # React components
+│   ├── lib/          # Utility functions
+│   └── middleware.ts # Clerk authentication middleware
+├── public/           # Static files
+└── ...config files
+```
 
-## Learn More
+## Features Usage
 
-To learn more about Next.js, take a look at the following resources:
+### Authentication
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Sign Up: Visit `/sign-up` to create a new account
+- Sign In: Visit `/sign-in` to log into your account
+- User Profile: Access user profile at `/user`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Theme Support
 
-## Deploy on Vercel
+The project includes a built-in theme system powered by Tailwind CSS. You can customize the theme in `tailwind.config.ts`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
