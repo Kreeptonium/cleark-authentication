@@ -42,11 +42,23 @@ yarn install
 
 ### 2. Environment Configuration
 
-1. Create a `.env.local` file in the root directory
+## Environment Setup
+
+1. Create a `.env.local` file in the root directory:
+```bash
+touch .env.local
+```
 2. Add your Clerk environment variables:
 ```env
+# Clerk Authentication Keys
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_publishable_key
 CLERK_SECRET_KEY=your_secret_key
+
+# Clerk Authentication Routes
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/header/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/header/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
 ```
 
 ### 3. Development
@@ -76,9 +88,9 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see the r
 
 ### Authentication
 
-- Sign Up: Visit `/sign-up` to create a new account
-- Sign In: Visit `/sign-in` to log into your account
-- User Profile: Access user profile at `/user`
+- Sign Up: Visit `header/sign-up` to create a new account
+- Sign In: Visit `header/sign-in` to log into your account
+
 
 ### Theme Support
 
